@@ -7,7 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Created by: Tolulope Adebayo
+ * Created on: 04-04-2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #23 UniCode
+ * This program takes the CAPITAL letters from A to Z along with the corresponding Unicode value and place each in a listbox
+*/
 namespace UnicodeToluA
 {
     public partial class frmUnicode : Form
@@ -24,12 +30,15 @@ namespace UnicodeToluA
             int Counter;
             // Clear all Items from the list box
             this.lstUnicode.Items.Clear();
-            // loop through letters A-Z which aree 65 to 90 respectively in Unicode 
-            for (Counter = 65; Counter <= 90; Counter++) ;
-            // Convert the value in unicode to the letter 
-            UnicodeCharacter = char.ConvertFromUtf32(Counter);
-            //  display the letter withg iit's respective unicode value in the unicode 
-            lstUnicode.Items.Add(UnicodeCharacter + " -> " + Counter);
+            // Create a For Loop to convert each number 
+            for (Counter = 65; Counter <= 91; Counter++) 
+            {
+                // Convert the value in unicode letter
+                UnicodeCharacter = char.ConvertFromUtf32(Counter);
+                //Add the letters to the values to the list box
+               lstUnicode.Items.Add(UnicodeCharacter + " -> " + Counter);
+            }
+            
 
         }
     }
